@@ -1,10 +1,6 @@
-package com.kyle.learn.employee.entities;
+package com.kyle.learn.employee.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -19,6 +15,4 @@ public class EmployeeEntity {
     private String firstName;
     private String lastName;
     private String emailId;
-
-
 }

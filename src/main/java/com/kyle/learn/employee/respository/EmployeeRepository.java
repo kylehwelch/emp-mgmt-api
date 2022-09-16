@@ -2,10 +2,8 @@ package com.kyle.learn.employee.respository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import com.kyle.learn.employee.entities.EmployeeEntity;
+import com.kyle.learn.employee.entity.EmployeeEntity;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Long> {
-    
 }

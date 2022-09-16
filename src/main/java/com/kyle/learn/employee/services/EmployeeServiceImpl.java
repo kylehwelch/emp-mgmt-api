@@ -3,13 +3,13 @@ package com.kyle.learn.employee.services;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
-import com.kyle.learn.employee.entities.EmployeeEntity;
+import com.kyle.learn.employee.entity.EmployeeEntity;
 import com.kyle.learn.employee.model.Employee;
 import com.kyle.learn.employee.respository.EmployeeRepository;
 
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService{
 
     private EmployeeRepository employeeRepository;
 
@@ -19,11 +19,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee createEmployee(Employee employee) {
-        EmployeeEntity employeeEntity = null;
+        EmployeeEntity employeeEntity = new EmployeeEntity();
 
         BeanUtils.copyProperties(employee, employeeEntity);
         employeeRepository.save(employeeEntity);
         return employee;
     }
-
 }
