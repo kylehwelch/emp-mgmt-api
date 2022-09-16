@@ -1,5 +1,7 @@
 package com.kyle.learn.employee.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.*;
 
 import com.kyle.learn.employee.model.Employee;
@@ -20,4 +22,11 @@ public class EmployeeController {
     public Employee createEmployee(@RequestBody Employee employee) {
         return employeeService.createEmployee(employee);
     }
+
+    @GetMapping("/employees/")
+    public List<Employee> getAllEmployees() {
+        return employeeService.getAllEmployees();
+    }
+
+
 }
